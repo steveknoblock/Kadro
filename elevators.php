@@ -28,6 +28,7 @@ interface BuildingInterface
 
 /* ASSIGNMENT - IMPLEMENT THE BUILDING CLASS */
 
+
 class Building implements BuildingInterface {
 
 	public $name;
@@ -92,7 +93,11 @@ class Elevator implements ElevatorInterface {
 	public function setName($name) {
 		$this->name = $name;
 	}
-		
+	
+	/**
+	 * Respond to up button push.
+	 * @return int 1/0
+	 */
 	public function pushUpButton() {
 		if($this->floor == $this->floors) {
 			//do nothing
@@ -108,9 +113,8 @@ class Elevator implements ElevatorInterface {
 	
 	/**
 	 * Respond to down button push.
-	 * @return 1 or 0
+	 * @return int 1/0
 	 */
-		
 	public function pushDownButton() {
 		if($this->floor == 1) {
 			//do nothing

@@ -38,7 +38,7 @@ class Building implements BuildingInterface {
 	public function __construct($name, $floors, $elevators) {
 		$this->name = $name;
 		$this->floors = $floors;
-		$this->elevators = $this->elevators + 1;
+		$this->elevators = $elevators;
 	}
 
 	public function elevatorByName($name) {
